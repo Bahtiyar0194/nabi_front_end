@@ -1,6 +1,6 @@
-# nuxt-auth-jwt
+# Nabi Distribution Front-End project
 
-> My supreme Nuxt.js project
+> My supreme Nuxt.js project for Nabi Distribution
 
 ## Build Setup
 
