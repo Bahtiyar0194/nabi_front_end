@@ -28,7 +28,7 @@ export default {
      ** Customize the environment variables
      */
     axios: {
-        baseURL: 'http://myapp.loc', // Used as fallback if no runtime config is provided
+        baseURL: 'http://app.nabi-test.kz', // Used as fallback if no runtime config is provided
     },
     /*
      ** Plugins to load before mounting the App
