@@ -27,9 +27,8 @@ export default {
     /*
      ** Customize the environment variables
      */
-    env: {
-        baseUrl: process.env.BASE_URL,
-        apiBaseUrl: process.env.API_BASE_URL,
+    axios: {
+        baseURL: 'http://myapp.loc', // Used as fallback if no runtime config is provided
     },
     /*
      ** Plugins to load before mounting the App
