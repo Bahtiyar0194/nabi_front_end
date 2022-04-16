@@ -31,6 +31,9 @@
           ><i class="bi bi-house-door"></i
           ><span>{{ $t("pages.dashboard.title") }}</span></nuxt-link
         >
+        <nuxt-link class="dashboard-item" :to="localePath('/office/wallets')"
+          ><i class="bi bi-wallet2"></i><span>Мои кошельки</span></nuxt-link
+        >
         <nuxt-link class="dashboard-item" :to="localePath('/office/products')"
           ><i class="bi bi-bag"></i
           ><span>{{ $t("pages.products.title") }}</span></nuxt-link
@@ -40,8 +43,10 @@
           ><span>{{ $t("pages.business.title") }}</span></nuxt-link
         >
         <nuxt-link class="dashboard-item" :to="localePath('/office/structure')"
-          ><i class="bi bi-diagram-3"></i
-          ><span>Структура</span></nuxt-link
+          ><i class="bi bi-diagram-3"></i><span>Структура</span></nuxt-link
+        >
+        <nuxt-link class="dashboard-item" :to="localePath('/office/orders')"
+          ><i class="bi bi-receipt"></i><span>Мои заказы</span></nuxt-link
         >
       </div>
       <div>

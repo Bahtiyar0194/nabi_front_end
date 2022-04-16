@@ -1,3 +1,6 @@
+const dev_api = process.env.DEV_API;
+const prod_api = process.env.PROD_API;
+
 export default {
     mode: 'universal',
     /*
@@ -28,7 +31,8 @@ export default {
      ** Customize the environment variables
      */
     axios: {
-        baseURL: 'http://app.nabi-test.kz', // Used as fallback if no runtime config is provided
+        // Used as fallback if no runtime config is provided
+        baseURL: process.env.NODE_ENV === 'development' ? dev_api : prod_api
     },
     /*
      ** Plugins to load before mounting the App
@@ -48,7 +52,6 @@ export default {
      ** Nuxt.js modules
      */
     modules: [
-        // Doc: https://axios.nuxtjs.org/usage
         '@nuxtjs/axios',
         '@nuxtjs/pwa',
         '@nuxtjs/auth-next',
