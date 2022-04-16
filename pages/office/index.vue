@@ -66,16 +66,28 @@
     <div class="col-span-12 lg:col-span-3">
       <div class="card">
         <p class="mb-1">{{ $t("pages.dashboard.main_wallet") }}</p>
-        <h2>{{ $auth.user.main_wallet }} $</h2>
+
+        <h2>
+          <animated-number
+            :value="$auth.user.main_wallet"
+            :formatValue="formatToPrice"
+            :duration="1500"
+          />
+          $
+        </h2>
       </div>
     </div>
   </div>
 </template>
 <script>
 import { mapActions, mapGetters } from "vuex";
+import AnimatedNumber from "animated-number-vue";
 export default {
   layout: "office",
   middleware: "auth",
+  components: {
+    AnimatedNumber,
+  },
   data() {
     return {
       getStatusTypes: "",
@@ -127,6 +139,9 @@ export default {
     rightScroll() {
       let container = document.getElementById("status_container");
       container.scrollLeft += 300;
+    },
+    formatToPrice(value) {
+      return `${value.toFixed(2)}`;
     },
   },
   computed: {
